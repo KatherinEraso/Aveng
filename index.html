@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Losvengadores</title>
+    <title>Los Vengadores</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .banner {
             width: 100%;
-            height: 300px; /* Ajusta la altura según necesites */
+            height: 300px;
             background-image: url('img/Bannav.png');
             background-size: cover;
             background-position: center;
@@ -18,23 +17,32 @@
 
         .navbar {
             background-color: #182353;
-            
         }
+
         .navbar .nav-link, .navbar .navbar-brand {
             color: white !important;
         }
-     .navbar .nav-link:hover {
-                color: #557ae0 !important;
-     }
-     
-    </style>
 
+        .navbar .nav-link:hover {
+            color: #557ae0 !important;
+        }
+
+        /* Ocultar todas las secciones al inicio excepto la primera */
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        #heroes {
+            display: block; /* Mostrar esta sección por defecto */
+        }
+    </style>
 </head>
 
 <body>
-    <div class="banner">
-    </div>
-    <nav class="navbar navbar-expand-lg" style="background-color: #172e46; padding: 10px;">
+    <div class="banner"></div>
+
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">Menú</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -44,7 +52,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-3">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#heroes">Héroes</a>  <!-- Enlace a la sección -->
+                        <a class="nav-link text-white" href="#heroes">Héroes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#historia">Historia</a>
@@ -56,9 +64,8 @@
             </div>
         </div>
     </nav>
-    
 
-    <section id="heroes" style="display: none; padding: 20px;">
+    <section id="heroes">
         <h2>NUESTROS HÉROES</h2>
         <div class="d-flex flex-wrap gap-3">
         <div class="card" style="width: 18rem;">
@@ -141,26 +148,58 @@
                 <p class="card-text">Espía y experta en combate cuerpo a cuerpo. Posee habilidades de sigilo y armas de espionaje</p>
             </div>
         </div>
-           
+    </section>
 
-
-
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    const links = document.querySelectorAll(".nav-link");
-                    const sections = document.querySelectorAll("section");
+    <section id="historia">
+        <h2>Historia de Los Vengadores</h2>
+        <p>Los Vengadores son un grupo de superhéroes creado por Marvel Comics en 1963, ideados por Stan Lee y Jack Kirby. Su propósito inicial era unir a los héroes más poderosos de la Tierra para enfrentar amenazas demasiado grandes para cualquier individuo.</p>
         
-                    links.forEach(link => {
-                        link.addEventListener("click", function (event) {
-                            event.preventDefault(); 
-                            let targetId = this.getAttribute("href").substring(1); 
-                            sections.forEach(section => section.style.display = "none"); 
-                            document.getElementById(targetId).style.display = "block"; 
-                        });
-                    });
-                });
-            </script>
+        <h3>Los Orígenes</h3>
+        <p>La primera alineación de Los Vengadores estuvo conformada por Iron Man (Tony Stark), Thor, Hulk (Bruce Banner), Ant-Man (Hank Pym) y La Avispa (Janet Van Dyne). Se formaron cuando Loki, el dios del engaño, intentó usar a Hulk como un peón en su plan malvado. Sin embargo, su estrategia falló y los héroes se unieron para derrotarlo. Decidieron formar un equipo permanente bajo el nombre de "Los Vengadores".</p>
         
+        <p>Poco después, el Capitán América (Steve Rogers) se unió al equipo tras ser encontrado congelado en el hielo. Desde entonces, se convirtió en un líder icónico y una de las figuras más representativas del grupo.</p>
+        
+        <h3>Batallas y Nuevos Miembros</h3>
+        <p>A lo largo de los años, la alineación de Los Vengadores cambió constantemente, con héroes como Hawkeye, la Bruja Escarlata, Quicksilver, Pantera Negra, Visión, Spider-Man, Doctor Strange y muchos más uniéndose al equipo.</p>
     
+        <p>Los Vengadores han enfrentado innumerables amenazas, incluyendo a:</p>
+        <ul>
+            <li><strong>Ultrón</strong>: Una inteligencia artificial creada por Hank Pym que se volvió contra la humanidad.</li>
+            <li><strong>Thanos</strong>: Un titán loco obsesionado con el equilibrio del universo, quien usó las Gemas del Infinito para eliminar a la mitad de la vida en el universo.</li>
+            <li><strong>Loki</strong>: El villano que provocó su formación, manipulando a enemigos para destruir la Tierra.</li>
+            <li><strong>Kang el Conquistador</strong>: Un viajero del tiempo con ambiciones de dominación total.</li>
+        </ul>
+    
+        <h3>El Momento más Oscuro: La Guerra del Infinito</h3>
+        <p>Uno de los eventos más devastadores en la historia de Los Vengadores ocurrió cuando Thanos logró reunir las seis Gemas del Infinito y chasquear los dedos, eliminando a la mitad de la población del universo. Durante cinco años, los héroes que sobrevivieron intentaron reconstruir el mundo, hasta que lograron encontrar una forma de revertir la destrucción con un audaz viaje en el tiempo.</p>
+        
+        <p>En la batalla final, todos los héroes caídos regresaron para enfrentarse a Thanos en una épica lucha. Finalmente, Iron Man sacrificó su vida para detener al titán loco y restaurar la paz en el universo.</p>
+    
+        <h3>El Legado de Los Vengadores</h3>
+        <p>Tras la batalla contra Thanos, el equipo cambió una vez más. Steve Rogers entregó su escudo a Sam Wilson (Falcon), Thor partió en busca de nuevas aventuras, y nuevos héroes como Spider-Man, Doctor Strange y Shang-Chi comenzaron a tomar protagonismo.</p>
+    
+        <p>Los Vengadores continúan siendo la última línea de defensa de la Tierra contra amenazas cósmicas y terrestres, demostrando que, aunque los héroes cambien, el espíritu del equipo perdura.</p>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".nav-link");
+            const sections = document.querySelectorAll("section");
+
+            links.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    let targetId = this.getAttribute("href").substring(1);
+
+                    // Ocultar todas las secciones
+                    sections.forEach(section => section.style.display = "none");
+
+                    // Mostrar la sección seleccionada
+                    document.getElementById(targetId).style.display = "block";
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
