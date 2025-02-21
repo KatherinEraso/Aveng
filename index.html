@@ -60,6 +60,17 @@
             </div>
         </div>
     </nav>
+    <button type="button" class="btn btn-danger" onclick="cambiarColor(this)">Danger</button>
+
+<script>
+  function cambiarColor(boton) {
+    boton.classList.remove('btn-danger');  
+    boton.classList.add('btn-success');    
+  }
+</script>
+
+
+
 
     <section id="heroes">
         <h2>NUESTROS HÉROES</h2>
