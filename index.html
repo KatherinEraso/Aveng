@@ -7,12 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+    .fondo{
+    background-image: url('img/bg4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    } 
+
         .banner {
             width: 100%;
             height: 400px;
             background-image: url('img/Bannav.png');
             background-size: cover;
             background-position: center;
+            position: relative;
         }
 
         .navbar {
@@ -26,27 +35,94 @@
         .navbar .nav-link:hover {
             color: #557ae0 !important;
         }
+<<<<<<< HEAD
 
        
+=======
+        
+      
+>>>>>>> a722511 (nversion4)
         section {
             display: none;
             padding: 20px;
         }
+<<<<<<< HEAD
+=======
+        .hojah {
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 20px; 
+    max-width: 800px; 
+    margin: 50px auto; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    border: 1px solid #ccc; 
+}
+
+
+    .card {
+        background: linear-gradient(45deg, #002b5b, #004080, #0066cc, #004080, #002b5b); /* Azul metálico */
+    background-size: 200% 200%;
+    color: white; /* Color del texto */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 162, 255, 0.2), 0 0 20px rgba(0, 162, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(
+        120deg, 
+        rgba(255, 255, 255, 0) 30%, 
+        rgba(255, 255, 255, 0.5) 50%, 
+        rgba(255, 255, 255, 0) 70%
+    );
+    transform: rotate(30deg);
+    animation: brillo 3s infinite ease-in-out; 
+}
+
+@keyframes brillo {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 162, 255, 0.5), 0 0 30px rgba(0, 162, 255, 0.7);
+}
+#heroes h2 {
+    color: white; 
+    font-family: 'Arial', cursive, sans-serif; 
+    font-size: 36px; 
+    text-align: center; 
+    font-weight: bold; 
+}
+>>>>>>> a722511 (nversion4)
     </style>
 </head>
 
 <body>
     <div class="banner"></div>
-
+    <body class="fondo">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">Menú</a>
+            <a class="navbar-brand text-white" href="#"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#inicio">Inicio</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#heroes">Héroes</a>
                     </li>
@@ -146,7 +222,7 @@
         </div>
     </section>
 
-    <section id="historia">
+    <section id="historia" class="hojah">
         <h2>Historia de Los Vengadores</h2>
         <p>Los Vengadores son un grupo de superhéroes creado por Marvel Comics en 1963, ideados por Stan Lee y Jack Kirby. Su propósito inicial era unir a los héroes más poderosos de la Tierra para enfrentar amenazas demasiado grandes para cualquier individuo.</p>
         
